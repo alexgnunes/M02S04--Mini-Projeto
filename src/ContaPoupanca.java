@@ -9,7 +9,7 @@ class ContaPoupanca extends Conta {
     }
 
     public void aplicarRendimento() {
-        setSaldo(getSaldo() * rendimento);
+        setSaldo(getSaldo() * (1 +rendimento));
     }
 
     @Override

@@ -15,6 +15,7 @@ public class Banco {
     public void detalharContas() {
         for (Conta conta : contas) {
             conta.exibirDetalhes();
+            System.out.println("====================");
         }
     }
 }
