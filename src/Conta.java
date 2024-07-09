@@ -1,3 +1,5 @@
+import exceptions.SaldoInsuficienteException;
+
 public abstract class Conta {
     private String titular;
     private double saldo;
@@ -25,7 +27,7 @@ public abstract class Conta {
         }
     }
 
-    public abstract void sacar(double valor);
+    public abstract void sacar(double valor) throws SaldoInsuficienteException;
 
     public abstract void exibirDetalhes();
 }

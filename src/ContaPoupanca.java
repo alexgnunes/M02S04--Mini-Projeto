@@ -1,3 +1,5 @@
+import exceptions.SaldoInsuficienteException;
+
 class ContaPoupanca extends Conta {
     private double rendimento;
 
@@ -11,9 +13,9 @@ class ContaPoupanca extends Conta {
     }
 
     @Override
-    public void sacar(double valor) {
+    public void sacar(double valor) throws SaldoInsuficienteException {
         if (valor > getSaldo()) {
-            throw new IllegalArgumentException("Saldo insuficiente para realizar o saque.");
+            throw new SaldoInsuficienteException("Saldo insuficiente para realizar o saque.");
         }
         setSaldo(getSaldo() - valor);
     }
